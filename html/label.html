@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="#"/>
+    <link rel="preload" href="{{res}}/font/HYWH-65W.woff" as="font" type="font/woff">
+    <link rel="preload" href="{{res}}/font/NZBZ.woff" as="font" type="font/woff">
+    <link rel="preload" href="{{res}}/font/tttgbnumber.woff" as="font" type="font/woff">
+    <title>地图资源列表</title>
+    <link rel="stylesheet" type="text/css" href="{{res}}/index.css"/>
+<style>
+    .help-table .td,.help-table .th{width:20%}
+    .help-title,.help-group{color:#ceb78b}
+    .help-title,.help-group{text-shadow:none}
+    .help-desc{color:#eee}
+    .cont-box{background:rgba(210, 220, 230, .2)}
+    .cont-box{backdrop-filter:blur(3px)}
+    .help-group{background:rgba(6, 21, 31, .4)}
+    .help-table .tr:nth-child(odd){background:rgba(6, 21, 31, .2)}
+    .help-table .tr:nth-child(even){background:rgba(6, 21, 31, .35)}
+</style>
+  </head>
+
+  <body class="elem-default default-mode  " style=transform:scale(1.2)>
+    <div class="container" id="container">
+      <div class="info-box">
+        <div class="head-box type">
+          <div class="title">地图资源列表</div>
+          <div class="copyright"><span style="color:#ffffff;">发送</span> #草神瞳在哪 <span style="color:#ffffff;">查看资源点，发送</span> #地图帮助 <span style="color:#ffffff;">查看说明</span></div>
+        </div>
+      </div>
+
+      {{each data group}}
+      {{set len = group?.list?.length || 0 }}
+      <div class="cont-box">
+        <div class="help-group">{{group.title}}</div>
+        {{if len > 0}}
+        <div class="help-table">
+          <div class="tr">
+            {{each group.list help idx}}
+            <div class="td">
+              <img class="help-icon" src="{{help.icon}}" style="background-size: 50px 50px;">
+              <strong class="help-title">{{@help.name}}</strong>
+            </div>
+            {{if idx%5 === 5-1 && idx>0 && idx< len-1}}
+          </div>
+          <div class="tr">
+            {{/if}}
+            {{/each}}
+            <% for(let i=(len-1)%5; i< 5-1 ; i++){ %>
+            <div class="td"></div>
+            <% } %>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </body>
+</html>

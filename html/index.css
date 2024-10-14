@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Number';
+  src: url("./font/tttgbnumber.woff") format('woff'), url("./font/tttgbnumber.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'NZBZ';
+  src: url("./font/NZBZ.woff") format('woff'), url("./font/NZBZ.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'YS';
+  src: url("./font/HYWH-65W.woff") format('woff'), url("./font/HYWH-65W.ttf") format('truetype');
+}
+.font-YS {
+  font-family: Number, "汉仪文黑-65W", YS, PingFangSC-Medium, "PingFang SC", sans-serif;
+}
+.font-NZBZ {
+  font-family: Number, "印品南征北战NZBZ体", NZBZ, "汉仪文黑-65W", YS, PingFangSC-Medium, "PingFang SC", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+}
+body {
+  font-size: 18px;
+  color: #1e1f20;
+  font-family: Number, "汉仪文黑-65W", YS, PingFangSC-Medium, "PingFang SC", sans-serif;
+  transform: scale(5);
+  transform-origin: 0 0;
+  width: 830px;
+  background: url("./theme/bg-01.png");
+}
+.container {
+  background: url(./theme/main-01.png) top left no-repeat;
+  background-size: 100% auto;
+  width: 830px;
+  padding: 20px 15px 10px 15px;
+  background-size: contain;
+}
+.head-box {
+  border-radius: 15px;
+  padding: 10px 20px;
+  position: relative;
+  color: #fff;
+  margin-top: 30px;
+  margin: 60px 0 0 0;
+  padding-bottom: 0;
+}
+.head-box .title {
+  font-family: Number, "印品南征北战NZBZ体", NZBZ, "汉仪文黑-65W", YS, PingFangSC-Medium, "PingFang SC", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0 0 1px #000, 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+.head-box .title .label {
+  display: inline-block;
+  margin-left: 10px;
+}
+.head-box .genshin_logo {
+  position: absolute;
+  top: 1px;
+  right: 15px;
+  width: 97px;
+}
+.head-box .label {
+  font-size: 16px;
+  text-shadow: 0 0 1px #000, 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+.head-box .label span {
+  color: #d3bc8e;
+  padding: 0 2px;
+}
+.cont-box {
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.help-group {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 15px 10px 20px;
+}
+.help-table {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0;
+  border-radius: 0 0 10px 10px;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  color: #fff;
+}
+.help-table .tr {
+  display: table-row;
+}
+.help-table .td,
+.help-table .th {
+  font-size: 14px;
+  display: table-cell;
+  box-shadow: 0 0 1px 0 #888 inset;
+  padding: 12px 0 12px 50px;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+}
+.help-table .tr:last-child .td {
+  padding-bottom: 12px;
+}
+.help-table .th {
+  background: rgba(34, 41, 51, 0.5);
+}
+.help-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  /*background: url("icon.png") 0 0 no-repeat;*/
+  background-size: 50px auto;
+  border-radius: 5px;
+  left: 10px;
+  top: 12px;
+  transform: scale(0.85);
+}
+.help-title {
+  display: block;
+  text-align: center;
+  color: #d3bc8e;
+  font-size: 16px;
+  line-height: 24px;
+}
+.help-title span {
+  color: #fff;
+}
+.help-desc {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+}
+.copyright {
+  font-size: 20px;
+  text-align: center;
+  color: #d3bc8e;
+  position: relative;
+  padding-left: 10px;
+  text-shadow: 1px 1px 1px #000;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=index.css.map */
