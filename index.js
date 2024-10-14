@@ -53,7 +53,7 @@ export class MysMap extends plugin {
   async installOrUpdate() {
     let cmd = ''
     if (!fs.existsSync(mappath) || this.e.msg.includes('下载')) {
-      await this.reply('开始下载地图资源')
+      await this.reply('开始下载地图资源，资源包较大，请耐心等待')
       cmd = `git clone --depth=1 ${url} ${mappath}`
       exec(cmd, { cwd: process.cwd(), stdio: 'inherit' }, (error) => {
         if (error) { return this.reply(`下载错误：\n${error}`) } else {
