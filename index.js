@@ -45,7 +45,13 @@ export class MysMap extends plugin {
         },
       ],
     });
-
+    
+    /** 定时任务 */
+    this.task = {
+      cron: '0 0 0/6 * * ?',
+      name: '更新米游社大地图资源',
+      fnc: () => this.init()
+    }
     this.path = './plugins/mysMap';
   }
 
