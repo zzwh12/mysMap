@@ -8,7 +8,7 @@ import path from 'node:path';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 const mappath = './plugins/mysMap/images'
-const url = 'https://gitcode.com/catboss/MysMap'
+const url = 'https://github.com/zzwh12/mysmapData'
 /** 此版本为修改版本 */
 /** 原版本: https://gitee.com/HanaHimeUnica/yzjs/tree/mysMap */
 
