@@ -8,7 +8,7 @@ import path from 'node:path';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 const mappath = './plugins/mysMap/images'
-const url = 'https://github.com/zzwh12/mysmapData'
+const url = 'https://ghproxy.ganyu.us.kg/https://github.com/win-syswow64/MysMap.git'
 /** 此版本为修改版本 */
 /** 原版本: https://gitee.com/HanaHimeUnica/yzjs/tree/mysMap */
 
@@ -67,7 +67,7 @@ export class MysMap extends plugin {
         }
       })
     } else {
-      await this.reply(`更新中，耐心等待，保存路径${Path}`)
+      await this.reply(`更新中，耐心等待，保存路径${mappath}`)
       cmd = 'git pull'
       if (this.e.msg.includes('强制')) { execSync('git fetch && git reset --hard', { cwd: mappath }) }
       exec(cmd, { cwd: mappath, stdio: 'inherit' }, (output, error) => {
