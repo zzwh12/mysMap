@@ -67,7 +67,7 @@ export class MysMap extends plugin {
         }
       })
     } else {
-      await this.reply(`更新中，耐心等待，保存路径${Path}`)
+      await this.reply(`更新中，耐心等待，保存路径${mappath}`)
       cmd = 'git pull'
       if (this.e.msg.includes('强制')) { execSync('git fetch && git reset --hard', { cwd: mappath }) }
       exec(cmd, { cwd: mappath, stdio: 'inherit' }, (output, error) => {
