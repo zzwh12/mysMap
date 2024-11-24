@@ -2,6 +2,8 @@
 
 全新提瓦特地图资源查询
 
+[mysMap地图数据](https://github.com/zzwh12/mysmapData)
+
 # mysMap使用
 
 1.打开Yunzai-Bot根目录运行
