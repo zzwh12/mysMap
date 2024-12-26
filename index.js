@@ -8,7 +8,7 @@ import path from 'node:path';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 const mappath = './plugins/mysMap/images'
-const url = 'https://gitea.fireflyz.us.kg/ZZWH/mysmapData.git'
+const url = 'https://gitea.fireflyz.cc/ZZWH/mysmapData.git'
 /** 此版本为修改版本 */
 /** 原版本: https://gitee.com/HanaHimeUnica/yzjs/tree/mysMap */
 
