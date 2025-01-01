@@ -117,23 +117,26 @@ export class MysMap extends plugin {
     let fileName;
     switch (map.id) {
       case 2:
-        fileName = `teyvat_${label.name}.jpg`;
+        fileName = `teyvat_${label.name}`;
         break;
       case 7:
-        fileName = `enkanomiya_${label.name}.jpg`;
+        fileName = `enkanomiya_${label.name}`;
         break;
       case 9:
-        fileName = `chasm_${label.name}.jpg`;
+        fileName = `chasm_${label.name}`;
         break;
       case 34:
-        fileName = `sea_of_bygone_eras_${label.name}.jpg`;
+        fileName = `sea_of_bygone_eras_${label.name}`;
         break;
       default:
         await this.reply(`${map.name}没有找到资源「${label.name}」，可能米游社wiki未更新或不存在该资源\n发送【#地图资源列表】查看所有资源名称`);
         return;
     }
+    
+    const webpPath = `${this.path}/images/resource_data/${fileName}.webp`;
+    const jpgPath = `${this.path}/images/resource_data/${fileName}.jpg`;
 
-    const filePath = `${this.path}/images/resource_data/${fileName}`;
+    const filePath = fs.existsSync(webpPath) ? webpPath : fs.existsSync(jpgPath) ? jpgPath : null;
     try {
       await this.reply([
         `※ ${label.name} 位置如下\n`,
