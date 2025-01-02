@@ -2,6 +2,8 @@
 
 全新提瓦特地图资源查询
 
+地图数据来源于Wuyi无疑开源项目：https://github.com/KimigaiiWuyi/fastapi_genshin_map
+
 [mysMap地图数据](https://github.com/zzwh12/mysmapData)
 
 ## mysMap使用
