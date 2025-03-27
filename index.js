@@ -24,7 +24,7 @@ export class MysMap extends plugin {
       rule: [
         {
           /** 命令正则匹配 */
-          reg: '^#*((提瓦特|渊下宫|层岩巨渊|地下矿区|旧(日之)?海)?((哪有|哪里有)(.+))|((.+)(在哪|在哪里|哪有|哪里有|位置|点位))(？|\\?)?)$',
+          reg: '^#*((提瓦特|渊下宫|层岩巨渊|地下矿区|旧(日之)?海|圣山|远古圣山)?((哪有|哪里有)(.+))|((.+)(在哪|在哪里|哪有|哪里有|位置|点位))(？|\\?)?)$',
           fnc: 'mysMap'
         },
         {
@@ -133,6 +133,9 @@ export class MysMap extends plugin {
       case 34:
         fileName = `sea_of_bygone_eras_${label.name}`
         break
+      case 36:
+        fileName = `sacred_mountain_${label.name}`
+        break
       default:
         await this.reply(`${map.name}没有找到资源「${label.name}」，可能米游社wiki未更新或不存在该资源\n发送【#地图资源列表】查看所有资源名称`)
         return
@@ -190,7 +193,7 @@ export class MysMap extends plugin {
 
   /** 消息过滤处理 */
   filterMsg () {
-    let reg = /＃|#|更新|提瓦特|渊下宫|层岩巨渊|地下矿区|旧(日之)?海|在|哪|里|有|位置|点位|？|\?/g
+    let reg = /＃|#|更新|提瓦特|渊下宫|层岩巨渊|地下矿区|旧(日之)?海|圣山|远古圣山|在|哪|里|有|位置|点位|？|\?/g
     let msg = this.e.msg.replace(reg, '')
 
     let label = this.labelMap(msg) || { id: null, name: msg }
@@ -202,6 +205,8 @@ export class MysMap extends plugin {
       map = { id: 9, name: '层岩巨渊' }
     } else if (/旧(日之)?海/.test(this.e.msg)) {
       map = { id: 34, name: '旧日之海' }
+    } else if (/圣山|远古圣山/.test(this.e.msg)) {
+      map = { id: 36, name: '远古圣山' }
     }
 
     return { msg, label, map }
